@@ -3,86 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Homepage</title>
+  <title>ShopEase - Your Favorite Online Store</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
     }
 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
     header {
-      background-color: #333;
-      color: white;
+      background-color: #111;
       padding: 20px 0;
       text-align: center;
+      color: #fff;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: #444;
+      background-color: #222;
+      padding: 10px 0;
     }
 
     nav a {
-      color: white;
-      padding: 14px 20px;
+      color: #fff;
+      margin: 0 20px;
       text-decoration: none;
-      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      background-color: #666;
+      color: #ff9900;
     }
 
+    /* Hero Section */
     .hero {
-      padding: 60px 20px;
-      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1600180758890-6b94519a8ba2?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
       text-align: center;
+      padding: 0 20px;
     }
 
-    .content {
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    /* Featured Section */
+    .featured {
       padding: 40px 20px;
       text-align: center;
-      background-color: white;
+      background-color: #fff;
     }
 
+    .featured h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-info h4 {
+      margin-bottom: 10px;
+    }
+
+    .product-info p {
+      color: #ff6600;
+      font-weight: bold;
+    }
+
+    /* Footer */
     footer {
-      background-color: #333;
+      background-color: #111;
       color: white;
       text-align: center;
       padding: 20px 0;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to My Website</h1>
-    <p>Your tagline goes here</p>
+    <h1>ShopEase</h1>
+    <p>Your favorite online shopping destination</p>
   </header>
 
   <nav>
     <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
+    <a href="#">Shop</a>
+    <a href="#">Deals</a>
     <a href="#">Contact</a>
+    <a href="#">Cart</a>
   </nav>
 
   <section class="hero">
-    <h2>Discover Awesome Things</h2>
-    <p>We build amazing websites and experiences.</p>
+    <div>
+      <h1>Big Sale is Live!</h1>
+      <p>Up to 50% off on selected products. Shop now!</p>
+    </div>
   </section>
 
-  <section class="content">
-    <h3>About Us</h3>
-    <p>We are a team of passionate developers, designers, and creatives who love building beautiful websites.</p>
+  <section class="featured">
+    <h2>Featured Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1a5?auto=format&fit=crop&w=600&q=80" alt="Sneakers">
+        <div class="product-info">
+          <h4>Stylish Sneakers</h4>
+          <p>$49.99</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1606813902522-eed6cfc57b28?auto=format&fit=crop&w=600&q=80" alt="Headphones">
+        <div class="product-info">
+          <h4>Wireless Headphones</h4>
+          <p>$89.99</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1606813903669-cf3b6f7ac51c?auto=format&fit=crop&w=600&q=80" alt="Watch">
+        <div class="product-info">
+          <h4>Smart Watch</h4>
+          <p>$119.99</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80" alt="Backpack">
+        <div class="product-info">
+          <h4>Urban Backpack</h4>
+          <p>$39.99</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 My Website. All rights reserved.</p>
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
   </footer>
 
 </body>
